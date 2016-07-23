@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'ALusine';
+  src: url("ALusine.ttf.woff") format("woff"), url("ALusine.ttf.svg#ALusine") format("svg"), url("ALusine.ttf.eot"), url("ALusine.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 11, ../sass/index.scss */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: none;
+  outline: none;
+  color: #f00;
+  list-style-type: none;
+  font-family: 'American Typewriter';
+}
+
+/* line 21, ../sass/index.scss */
+html {
+  background: #46a3de;
+}
+
+/* line 25, ../sass/index.scss */
+nav ul {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0 0 0;
+}
+/* line 32, ../sass/index.scss */
+nav li {
+  margin: 0 30px;
+}
+/* line 34, ../sass/index.scss */
+nav li a {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+/* line 43, ../sass/index.scss */
+#stage1_intro {
+  padding: 110px  0 0 0;
+}
+/* line 46, ../sass/index.scss */
+#stage1_intro h2 {
+  margin: 0 0 30px 0;
+  font-size: 56px;
+  color: #fff;
+  font-family: 'Alusine';
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(12, 60, 90, 0.57);
+}
+/* line 55, ../sass/index.scss */
+#stage1_intro .avatar {
+  display: block;
+  width: 155px;
+  height: 155px;
+  margin: 0 auto 40px;
+}
+/* line 61, ../sass/index.scss */
+#stage1_intro p {
+  margin: 0 0 10px 0;
+  font-size: 26px;
+  color: #c7e9ff;
+  font-family: 'Blogger Sans';
+  font-weight: normal;
+  text-align: center;
+}
