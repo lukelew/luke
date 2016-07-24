@@ -11,7 +11,7 @@
   font-size: 14px;
   text-decoration: none;
   outline: none;
-  color: #f00;
+  color: #fff;
   list-style-type: none;
   font-family: 'American Typewriter';
 }
@@ -69,4 +69,66 @@ nav li a {
   font-family: 'Blogger Sans';
   font-weight: normal;
   text-align: center;
+}
+
+/* line 72, ../sass/index.scss */
+#stage2_about {
+  background: #3185bb;
+  padding: 60px 0 120px 0;
+}
+/* line 76, ../sass/index.scss */
+#stage2_about h2 {
+  margin: 0 0 30px 0;
+  font-size: 50px;
+  color: #fff;
+  font-family: 'Alusine';
+  font-weight: normal;
+  text-align: center;
+}
+/* line 85, ../sass/index.scss */
+#stage2_about p {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #b3e2ff;
+}
+/* line 92, ../sass/index.scss */
+#stage2_about dl dt {
+  margin: 30px 0 6px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #b3e2ff;
+}
+/* line 98, ../sass/index.scss */
+#stage2_about dl dd {
+  text-align: center;
+}
+/* line 101, ../sass/index.scss */
+#stage2_about dl dd strong {
+  display: block;
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: normal;
+}
+/* line 110, ../sass/index.scss */
+#stage2_about .company {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* line 116, ../sass/index.scss */
+#stage2_about .company li {
+  margin: 0 20px;
+}
+/* line 119, ../sass/index.scss */
+#stage2_about .company li:nth-child(1) {
+  position: relative;
+  top: 4px;
+}
+/* line 124, ../sass/index.scss */
+#stage2_about .company li:nth-child(3) {
+  position: relative;
+  top: 10px;
 }

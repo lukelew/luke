@@ -14,7 +14,7 @@
   font-size: 14px;
   text-decoration: none;
   outline: none;
-  color: #f00;
+  color: #fff;
   list-style-type: none;
   font-family: 'American Typewriter';
 }
@@ -65,5 +65,66 @@ nav{
     font-family: 'Blogger Sans';
     font-weight: normal;
     text-align: center;
+  }
+}
+
+// 关于部分
+#stage2_about{
+  background: #3185bb;
+  padding: 60px 0 120px 0;
+
+  h2{
+    margin: 0 0 30px 0;
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Alusine';
+    font-weight: normal;
+    text-align: center;
+    // text-shadow: 0 1px 1px rgba(12, 60, 90, 0.57);
+  }
+  p{
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 26px;
+    color: #b3e2ff;
+  }
+  dl{
+    dt{
+      margin: 30px 0 6px 0;
+      text-align: center;
+      font-size: 26px;
+      color: #b3e2ff;
+    }
+    dd{
+      text-align: center;
+
+      strong{
+        display: block;
+        margin: 0 0 10px 0;
+        color: #fff;
+        font-size: 22px;
+        font-weight: normal;
+      }
+    }
+  }
+  .company{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li{
+      margin: 0 20px;
+      
+      &:nth-child(1){
+        position: relative;
+        top: 4px;
+      }
+
+      &:nth-child(3){
+        position: relative;
+        top: 10px;
+      }
+    }
   }
 }
