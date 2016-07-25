@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="luke">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -7,7 +7,7 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/icon.css"/>
     <link rel="stylesheet" href="/css/index.css"/>
-    
+    <script src="/js/angular.min.js"></script>
   </head>
   <body>
     <!-- stage1 -->
@@ -64,41 +64,48 @@
     </div>
 
     <!-- stage3 -->
-    <div id="stage3_works">
+    <div id="stage3_works" ng-controller="works">
       <h2>My works</h2>
       <p class="sub_title">I love to try something challenging</p>
       <div id="works_box">
-        <figure class="single_work">
-          <a href="javascript:void(0);"><img src="/images/work1.jpg" alt=""></a>
+        <figure class="single_work" id="uniqueway_thumb">
+          <a ng-click="showBox(); insertPic('uniqueway_thumb')" href="javascript:void(0);"><img src="/images/work1.jpg" alt="uniqueway-thumb"></a>
           <figcaption>uniqueway</figcaption>
           <p>design + development</p>
         </figure>
-        <figure class="single_work">
-          <a href="javascript:void(0);"><img src="/images/work2.jpg" alt=""></a>
+        <figure class="single_work" id="hemax_thumb">
+          <a ng-click="showBox(); insertPic('hemax_thumb')" href="javascript:void(0);"><img src="/images/work2.jpg" alt="hemax-thumb"></a>
           <figcaption>hemax</figcaption>
           <p>development</p>
         </figure>
-        <figure class="single_work">
-          <a href="javascript:void(0);"><img src="/images/work3.jpg" alt=""></a>
+        <figure class="single_work" id="yidianer_thumb">
+          <a ng-click="showBox(); insertPic('yidianer_thumb')" href="javascript:void(0);"><img src="/images/work3.jpg" alt="yidianer-thumb"></a>
           <figcaption>yidianer</figcaption>
           <p>design + development</p>
         </figure>
-        <figure class="single_work">
-          <a href="javascript:void(0);"><img src="/images/work4.gif" alt=""></a>
+        <figure class="single_work" id="qr_thumb">
+          <a ng-click="showBox()" href="javascript:void(0);"><img src="/images/work4.gif" alt="hemax QR-code"></a>
           <figcaption>hemax QR-code</figcaption>
           <p>development with AE</p>
         </figure>
-        <figure class="single_work">
-          <a href="javascript:void(0);"><img src="/images/work5.jpg" alt=""></a>
+        <figure class="single_work" id="patent_thumb">
+          <a ng-click="showBox(); insertPic('patent_thumb')" href="javascript:void(0);"><img src="/images/work5.jpg" alt="patent publishment-thumb"></a>
           <figcaption>process monitor</figcaption>
           <p>development</p>
         </figure>
-        <figure class="single_work">
-          <a href="javascript:void(0);"><img src="/images/work6.jpg" alt=""></a>
+        <figure class="single_work" id="zhiyi_thumb">
+          <a ng-click="showBox(); insertPic('zhiyi_thumb')" href="javascript:void(0);"><img src="/images/work6.jpg" alt="zhiyiVC-thumb"></a>
           <figcaption>zhiyiVC</figcaption>
           <p>design + development</p>
         </figure>
+        {{replacePic}}
       </div>
+
+      <!-- 弹层 -->
+      <div id="pop_box">
+        <img ng-src="/images/{{replacePic}}">
+      </div>
+      <div id="overlay" ng-click="showBox()"></div>
     </div>
 
 
@@ -108,7 +115,6 @@
           <h2>Contact me</h2>
           <p>I’m looking forward some opportunities to work at Australia. </p>
           <p>Feel free to contact me anytime.</p>
-          <h6>copyright© 2016 Luke Lew</h6>
         </div>
         <div class="right">
           <ul class="social_platform">
@@ -126,8 +132,12 @@
             </li>
           </ul>
         </div>
+        <h6 class="copyright">copyright© 2016 Luke Lew</h6>
+        
       </div>
     </footer>
+
+    
     <script src="/js/index.js"></script>
   </body>
 </html>
