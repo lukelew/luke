@@ -1,6 +1,7 @@
 @import 'compass/css3/transform';
 @import 'compass/css3/transition';
 @import 'compass/css3/border-radius';
+@import 'compass/css3/box-shadow';
 
 
 @font-face {
@@ -60,7 +61,7 @@ nav{
 // 介绍部分
 #stage1_intro{
   min-height: 700px;
-  
+
   h2{
     margin: 0 0 30px 0;
     font-size: 56px;
@@ -88,8 +89,10 @@ nav{
 
 // 关于部分
 #stage2_about{
+  position: relative;
   background: #3185bb;
   padding: 60px 0 120px 0;
+  overflow: hidden;
 
   h2{
     margin: 0 0 30px 0;
@@ -148,6 +151,40 @@ nav{
       }
     }
   }
+  #file{
+    position: absolute;
+    left: 50%;
+    top: 160px;
+    z-index: 5;
+    width: 230px;
+    height: 240px;
+    margin: 0 0 0 -600px;
+    background: url(../images/file.png) no-repeat;
+    background-size: contain;
+  }
+  #mac{
+    position: absolute;
+    right: 50%;
+    top: 360px;
+    z-index: 5;
+    width: 330px;
+    height: 270px;
+    margin: 0 -580px 0 0;
+    background: url(../images/mac.png) no-repeat;
+    background-size: contain;
+  }
+  #earphone{
+    position: absolute;
+    left: 50%;
+    bottom: -160px;
+    z-index: 5;
+    width: 340px;
+    height: 380px;
+    margin: 0 0 0 -520px;
+    background: url(../images/earphone.png) no-repeat;
+    background-size: contain;
+  }
+
 }
 
 // 作品部分
@@ -181,9 +218,20 @@ nav{
       height: 290px;
       margin: 0 0 40px 0;
       a{
+        position: relative;
         display: block;
         width: 390px;
         cursor: pointer;
+
+        .text_lay{
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 5;
+          width: 100%;
+          height: 100%;
+          background: rgba(79,163,222,.5);
+        }
       }
       figcaption{
         height: 26px;
@@ -192,8 +240,9 @@ nav{
         color: #070707;
         text-align: center;
       }
-      p{
+      h6{
         font-size: 16px;
+        font-weight: normal;
         color: #b7b7b7;
         text-align: center;
       }
@@ -238,10 +287,10 @@ footer{
     }
     h6{
       position: relative;
-      top: -30px;
       clear: both;
       color: #3e4e58;
       font-size: 12px;
+      top: -30px;
     }
     .social_platform{
       display: flex;
@@ -288,21 +337,24 @@ footer{
   left: 50%;
   top: 50%;
   z-index: 1000;
-  width: 600px;
-  height: 80%;
-  margin: -20% 0 0 -300px;
+  width: 800px;
+  margin: 0 0 0 -400px;
   @include transition(all .3s ease);
-  @include translate(0, 30px);
+  @include translate(0, 50px);
+  @include scale(.95);
   visibility: hidden;
   opacity: 0;
   overflow: auto;
+  @include box-shadow(0px 0px 11px -1px rgba(0, 0, 0, 0.5));
 
   &.active{
     @include translate(0, 0);
+    @include scale(1);
     visibility: visible;
     opacity: 1;
   }
   img{
+    display: block;
     width: 100%;
   }
 }
@@ -313,13 +365,159 @@ footer{
   z-index: 900;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,255,.2);
+  background: rgba(0,0,0,.2);
   visibility: hidden;
   opacity: 0;
 
   &.active{
     visibility: visible;
     opacity: 1;
+  }
+}
+#back_top{
+  position: fixed;
+  left: 50%;
+  bottom: 140px;
+  z-index: 10;
+  width: 62px;
+  height: 26px;
+  margin: 0 0 0 640px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 16px;
+  color: #3185bb;
+  border: 2px #22638d solid;
+  background: #e0f1fc;
+  @include border-radius(2px);
+  @include transition(all .3s ease);
+  @include translate(10px, 0);
+  visibility: hidden;
+  opacity: 0;
+
+  &.active{
+    @include translate(0, 0);
+    visibility: visible;
+    opacity: 1;
+  }
+  i{
+    position: relative;
+    left: -3px;
+    top: 1px;
+    font-size: 14px;
+    color: #3185bb;
+  }
+}
+
+// loader
+#loader{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  margin: -55px 0 0 -50px;
+  width: 100px;
+  height: 110px;
+  background: rgba(255,255,255,.6);
+  visibility: hidden;
+  opacity: 0;
+  @include border-radius(3px);
+
+  &.active{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  p{
+    font-size: 18px;
+    color: #3185bb;
+    text-align: center;
+  }
+}
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3185bb;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
   }
 }
 
@@ -400,6 +598,11 @@ footer{
         }
       }
     }
+    #file,
+    #mac,
+    #earphone{
+      visibility: hidden;
+    }
   }
 
   #stage3_works{
@@ -430,9 +633,7 @@ footer{
         }
 
         figcaption{
-          text-align: left;
           padding: 0 0 0 .1rem;
-          background: #46a3de;
         }
       }
     }
@@ -502,6 +703,7 @@ footer{
 
       h6{
         margin: 0;
+        top: 0;
         padding: 0 .1rem .1rem;
       }
     }
@@ -521,4 +723,20 @@ footer{
   html{
     font-size: 129.375px;
   }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+  #stage2_about{
+    #file{
+      background: url(../images/file@2x.png) no-repeat;
+      background-size: contain;
+    }
+    #mac{
+      background: url(../images/mac@2x.png) no-repeat;
+      background-size: contain;
+    }
+    #earphone{
+      background: url(../images/earphone@2x.png) no-repeat;
+      background-size: contain;
+    }
+  } 
 }

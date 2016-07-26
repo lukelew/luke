@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="luke">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -7,16 +7,16 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/icon.css"/>
     <link rel="stylesheet" href="/css/index.css"/>
-    <script src="/js/angular.min.js"></script>
+    <script src="/js/jquery-3.1.0.min.js"></script>
   </head>
   <body>
     <!-- stage1 -->
     <div id="stage1_intro">
       <nav>
         <ul>
-          <li><a href="javascript:void(0);">About me</a></li>
-          <li><a href="javascript:void(0);">My works</a></li>
-          <li><a href="javascript:void(0);">Contact me</a></li>
+          <li><a href="#stage2_about">About me</a></li>
+          <li><a href="#stage3_works">My works</a></li>
+          <li><a href="#contact_me">Contact me</a></li>
         </ul>
       </nav>
 
@@ -36,6 +36,7 @@
         <dd>
           <strong>html/css/js</strong>
           <strong>jQuery/sass</strong>
+          <strong>responsive design</strong>
           <strong>svn/git</strong>
         </dd>
         <dt>I’m wokring hard on:</dt>
@@ -61,55 +62,78 @@
           <strong>swimming/diving</strong>
         </dd>
       </dl>
+      <div id="file"></div>
+      <div id="mac"></div>
+      <div id="earphone"></div>
     </div>
 
     <!-- stage3 -->
-    <div id="stage3_works" ng-controller="works">
+    <div id="stage3_works">
       <h2>My works</h2>
       <p class="sub_title">I love to try something challenging</p>
       <div id="works_box">
         <figure class="single_work" id="uniqueway_thumb">
-          <a ng-click="showBox(); insertPic('uniqueway_thumb')" href="javascript:void(0);"><img src="/images/work1.jpg" alt="uniqueway-thumb"></a>
+          <a href="javascript:void(0);">
+            <img src="/images/work1.jpg" alt="uniqueway-thumb">
+          </a>
           <figcaption>uniqueway</figcaption>
-          <p>design + development</p>
+          <h6>design + development</h6>
         </figure>
         <figure class="single_work" id="hemax_thumb">
-          <a ng-click="showBox(); insertPic('hemax_thumb')" href="javascript:void(0);"><img src="/images/work2.jpg" alt="hemax-thumb"></a>
+          <a href="javascript:void(0);">
+            <img src="/images/work2.jpg" alt="hemax-thumb">
+          </a>
           <figcaption>hemax</figcaption>
-          <p>development</p>
+          <h6>development</h6>
         </figure>
         <figure class="single_work" id="yidianer_thumb">
-          <a ng-click="showBox(); insertPic('yidianer_thumb')" href="javascript:void(0);"><img src="/images/work3.jpg" alt="yidianer-thumb"></a>
+          <a href="javascript:void(0);">
+            <img src="/images/work3.jpg" alt="yidianer-thumb">
+          </a>
           <figcaption>yidianer</figcaption>
-          <p>design + development</p>
+          <h6>design + development</h6>
         </figure>
         <figure class="single_work" id="qr_thumb">
-          <a ng-click="showBox()" href="javascript:void(0);"><img src="/images/work4.gif" alt="hemax QR-code"></a>
+          <a href="javascript:void(0);">
+            <img src="/images/work4.gif" alt="hemax QR-code">
+          </a>
           <figcaption>hemax QR-code</figcaption>
-          <p>development with AE</p>
+          <h6>development with AE</h6>
         </figure>
         <figure class="single_work" id="patent_thumb">
-          <a ng-click="showBox(); insertPic('patent_thumb')" href="javascript:void(0);"><img src="/images/work5.jpg" alt="patent publishment-thumb"></a>
+          <a href="javascript:void(0);">
+            <img src="/images/work5.jpg" alt="patent publishment-thumb">
+          </a>
           <figcaption>process monitor</figcaption>
-          <p>development</p>
+          <h6>development</h6>
         </figure>
         <figure class="single_work" id="zhiyi_thumb">
-          <a ng-click="showBox(); insertPic('zhiyi_thumb')" href="javascript:void(0);"><img src="/images/work6.jpg" alt="zhiyiVC-thumb"></a>
+          <a href="javascript:void(0);">
+            <img src="/images/work6.jpg" alt="zhiyiVC-thumb">
+          </a>
           <figcaption>zhiyiVC</figcaption>
-          <p>design + development</p>
+          <h6>design + development</h6>
         </figure>
-        {{replacePic}}
       </div>
 
       <!-- 弹层 -->
-      <div id="pop_box">
-        <img ng-src="/images/{{replacePic}}">
+      <div id="loader">
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
+        <p>loading...</p>
       </div>
-      <div id="overlay" ng-click="showBox()"></div>
+      <div id="pop_box">
+        <img id="big_pic" src="">
+      </div>
+      <div id="overlay"></div>
     </div>
 
 
-    <footer>
+    <footer id="contact_me">
       <div class="inner clearfix">
         <div class="left">
           <h2>Contact me</h2>
@@ -136,6 +160,8 @@
         
       </div>
     </footer>
+
+    <a href="javascript:void(0);" id="back_top"><i class="icon-arrow-up"></i>Top</a>
 
     
     <script src="/js/index.js"></script>
