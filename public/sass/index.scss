@@ -388,6 +388,7 @@ footer{
   top: 50%;
   z-index: 1000;
   width: 800px;
+  min-height: 300px;
   margin: 0 0 0 -400px;
   @include transition(all .3s ease);
   @include translate(0, 50px);
