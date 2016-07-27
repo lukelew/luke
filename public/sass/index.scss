@@ -3,15 +3,23 @@
 @import 'compass/css3/border-radius';
 @import 'compass/css3/box-shadow';
 
+$lightblue: #46a3de;
 
 @font-face {
   font-family: 'ALusine';
-    src:  url('ALusine.ttf.woff') format('woff'),
-    url('ALusine.ttf.svg#ALusine') format('svg'),
-    url('ALusine.ttf.eot'),
-    url('ALusine.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
+  src:  url('ALusine.ttf.woff') format('woff'),
+  url('ALusine.ttf.svg#ALusine') format('svg'),
+  url('ALusine.ttf.eot'),
+  url('ALusine.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'blogger_sans';
+  src: url('blogger_sans-webfont.woff2') format('woff2'),
+       url('blogger_sans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 *{
@@ -22,7 +30,7 @@
   outline: none;
   color: #fff;
   list-style-type: none;
-  font-family: 'American Typewriter';
+  font-family: 'blogger_sans','Open Sans', Arial, 'Hiragino Sans GB';
 }
 .clearfix:after{
   display: block;
@@ -32,7 +40,7 @@
   overflow: hidden;
 }
 html{
-  background: #46a3de;
+  background: $lightblue;
 }
 nav{
   padding: 0 0 110px 0;
@@ -47,12 +55,13 @@ nav{
     margin: 0 30px;
     a{
       font-size: 22px;
-      color: #ffffff;
+      color: #bce0f7;
       font-weight: normal;
-      @include transition(all .3s ease);
+      @include transition(all .1s ease);
 
       &:hover{
-        color: #f0ee68;
+        color: #fff;
+        border-bottom: 3px #fff solid;
       }
     }
   }
@@ -77,18 +86,17 @@ nav{
     height: 155px;
     margin: 0 auto 40px;
   }
-  p{
+  .intro{
     margin: 0 0 10px 0;
+    font-family: 'blogger_sans';
     font-size: 26px;
-    color: #c7e9ff;
-    font-family: 'Blogger Sans';
-    font-weight: normal;
+    color: #fff;
     text-align: center;
   }
 }
 
 // 关于部分
-#stage2_about{
+#about_me{
   position: relative;
   background: #3185bb;
   padding: 60px 0 120px 0;
@@ -188,21 +196,16 @@ nav{
 }
 
 // 作品部分
-#stage3_works{
+#my_works{
   background: #f0f9ff;
   padding: 60px 0 120px 0;
 
   h2{
     font-size: 50px;
     color: #3185bb;
+    margin: 0 0 80px 0;
     font-family: 'Alusine';
     font-weight: normal;
-    text-align: center;
-  }
-  .sub_title{
-    margin: 0 0 80px 0;
-    font-size: 24px;
-    color: #90c8ec;
     text-align: center;
   }
   #works_box{
@@ -217,31 +220,74 @@ nav{
       width: 390px;
       height: 290px;
       margin: 0 0 40px 0;
-      a{
+
+      .pic_link{
         position: relative;
         display: block;
         width: 390px;
-        cursor: pointer;
+        height: 230px;
+        background: #333;
 
-        .text_lay{
-          position: absolute;
-          left: 0;
-          top: 0;
-          z-index: 5;
+        &:hover{
+          img{
+            opacity: .8;
+          }
+          i{
+            visibility: visible;
+            opacity: 1;
+            @include transform(scale(1));
+          }
+        }
+
+        img{
           width: 100%;
-          height: 100%;
-          background: rgba(79,163,222,.5);
+          @include transition(all .3s ease);
+        }
+        i{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 50;
+          width: 40px;
+          height: 40px;
+          margin: -20px 0 0 -20px;
+          font-size: 40px;
+          color: #fff;
+          @include transition(all .3s ease);
+          @include transform(scale(.9));
+          visibility: hidden;
+          opacity: 0;
         }
       }
       figcaption{
-        height: 26px;
-        line-height: 26px;
-        font-size: 18px;
+        height: 24px;
+        line-height: 30px;
+        font-size: 20px;
         color: #070707;
+        text-align: center;
+        a{
+          font-size: 20px;
+          color: #070707;
+          @include transition(all .2s ease);
+
+          &:hover{
+            color: $lightblue;
+          }
+        }
+        i{
+          padding: 0 2px;
+          font-size: 16px;
+          color: #da0d0d;
+        }
+      }
+      h5{
+        font-size: 16px;
+        font-weight: normal;
+        color: #b7b7b7;
         text-align: center;
       }
       h6{
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         color: #b7b7b7;
         text-align: center;
@@ -291,6 +337,7 @@ footer{
       color: #3e4e58;
       font-size: 12px;
       top: -30px;
+      font-family: 'American Typewriter';
     }
     .social_platform{
       display: flex;
@@ -311,6 +358,9 @@ footer{
           i{
             font-size: 50px;
           }
+        }
+        .mail:hover{
+          background: #c65454;
         }
         .fb:hover{
           background: #3b5998;
@@ -550,7 +600,7 @@ footer{
     }
   }
 
-  #stage2_about{
+  #about_me{
     padding: .2rem 0 .6rem 0;
 
     h2{
@@ -605,16 +655,12 @@ footer{
     }
   }
 
-  #stage3_works{
+  #my_works{
     padding: .2rem 0 .6rem 0;
 
     h2{
-      margin: 0 0 .08rem 0;
-      font-size: .4rem;
-    }
-    .sub_title{
-      font-size: .14rem;
       margin: 0 0 .4rem 0;
+      font-size: .4rem;
     }
     #works_box{
       width: 100%;
@@ -623,17 +669,29 @@ footer{
         position: relative;
         width: 100%;
         margin: 0 0 .1rem 0;
-        a{
+
+        .pic_link{
           width: 100%;
           height: 1.85rem;
           overflow: hidden;
+          pointer-events:none;
+
+          &:hover{
+            img{
+              opacity: 1;
+            }
+            i{
+              visibility: hidden;
+            }
+          }
         }
-        img{
-          width: 100%;
-        }
+        
 
         figcaption{
           padding: 0 0 0 .1rem;
+          a:active{
+            color: $lightblue;
+          }
         }
       }
     }
@@ -671,9 +729,10 @@ footer{
 
         .social_platform{
           li{
-            width: 25%;
+            width: 20%;
             height: .6rem;
             a{
+              width: 100%;
               height: .6rem;
               line-height: 0.8rem;
               @include border-radius(.04rem);
@@ -725,7 +784,7 @@ footer{
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2){
-  #stage2_about{
+  #about_me{
     #file{
       background: url(../images/file@2x.png) no-repeat;
       background-size: contain;

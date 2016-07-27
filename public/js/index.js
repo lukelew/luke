@@ -23,7 +23,7 @@ if(!isSupportTouch){
         }
       };
 
-  $('#works_box').on('click','a',function(){
+  $('#works_box').on('click','.pic_link',function(){
     var curId = $(this).closest('figure').attr('id');
     var curPic = new Image();
     curPic.src = '/images/' + indexPic[curId];

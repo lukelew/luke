@@ -24,6 +24,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-zoom-in:before {
+  content: "\e987";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
 .icon-arrow-up:before {
   content: "\ea3a";
 }
@@ -39,4 +51,3 @@
 .icon-linkedin:before {
   content: "\eac9";
 }
-
