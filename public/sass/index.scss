@@ -213,20 +213,19 @@ nav{
     display: -webkit-flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1200px;
+    width: 1100px;
     margin: 0 auto;
 
     .single_work{
-      width: 390px;
+      width: 360px;
       height: 290px;
-      margin: 0 0 40px 0;
+      margin: 0 0 20px 0;
 
       .pic_link{
         position: relative;
         display: block;
-        width: 390px;
-        height: 230px;
-        background: #333;
+        width: 360px;
+        height: 212px;
 
         &:hover{
           img{
