@@ -72,32 +72,54 @@ else{
 }
 
 
+var pre_load_img = {
+        loading_pic: function (url, callback) {
+            var testimg = new Image();
+            testimg.src = url;
+            testimg.onload = function () {
+                callback.call(testimg);
+            };
+        },
+        init: function (imgarr, callback) {
+            var load_txt_dom = document.getElementById("load_txt");
+            console.log(load_txt_dom)
+            var pp_num = 0;
+            var img_sum = imgarr.length;
+            for (var i = 0; i < img_sum; i++) {
+                pre_load_img.loading_pic(imgarr[i], function (testimg) {
+                    pp_num++;
+                    var percent = parseInt((pp_num / img_sum) * 100) + "%";
+
+                    if (pp_num == img_sum) {
+                        if (callback != null) {
+                            console.log("回调")
+                            callback();
+                        }
+                    }
+
+                })
+            }
+        }
+    }
+
+    function add() {
+        console.log("所有图片资源加载完成");
+        setTimeout(function () {
+            loaded();
+        }, 1000)
+    }
+
+    function loaded(){
+      $('#loading').hide();
+      $('#stage1_intro h2').addClass('active');
+      $('.avatar').addClass('active');
+      $('.intro').addClass('active');
+    }
+
+    var pic_arr = [
+      '../images/avatar.png',
+      '../images/avatar@2x.png',
+    ];
 
 
-// var app = angular.module('luke',[]);
-// app.controller('works',function($scope){
-//   $scope.
-
-//   $scope.toggleClass = function(e){
-//     var myClassList = e.classList;
-//     if(myClassList.contains('active')){
-//       myClassList.remove('active')
-//     }
-//     else{
-//       myClassList.add('active');
-//     }
-//   };
-
-
-//   $scope.showBox = function(){
-//     var popBox = document.getElementById('pop_box');
-//     var overlay = document.getElementById('overlay');
-
-//     $scope.toggleClass(popBox);
-//     $scope.toggleClass(overlay);
-//   }
-
-//   $scope.insertPic = function(e){
-//     $scope.replacePic = $scope.indexPic[e];
-//   }
-// })
+    pre_load_img.init(pic_arr, add); //预加载
