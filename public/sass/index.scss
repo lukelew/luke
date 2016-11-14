@@ -58,6 +58,7 @@ nav{
       color: #bce0f7;
       font-weight: normal;
       @include transition(all .1s ease);
+      -webkit-animation: nav-in .3s ease;
 
       &:hover{
         color: #fff;
@@ -800,3 +801,17 @@ footer{
     }
   } 
 }
+
+@-webkit-keyframes nav-in{
+  0% { -webkit-transform: translateY(-10px) }
+  100% { -webkit-transform: translateY(0) }
+}
+@-moz-keyframes nav-in{
+  0% { -webkit-transform: translateY(-10px) }
+  100% { -webkit-transform: translateY(0) }
+}
+@keyframes nav-in{
+  0% { -webkit-transform: translateY(-10px) }
+  100% { -webkit-transform: translateY(0) }
+}
+
