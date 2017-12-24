@@ -807,172 +807,177 @@ footer .inner .social_platform li .lk:hover {
   nav {
     padding: 0 0 .45rem 0;
   }
-  /* line 674, ../sass/index.scss */
+  /* line 675, ../sass/index.scss */
+  nav #lang {
+    right: 25px;
+    top: 60px;
+  }
+  /* line 680, ../sass/index.scss */
   nav ul {
     padding: .2rem .2rem 0;
     justify-content: space-between;
   }
-  /* line 678, ../sass/index.scss */
+  /* line 684, ../sass/index.scss */
   nav li {
     margin: 0;
   }
-  /* line 680, ../sass/index.scss */
+  /* line 686, ../sass/index.scss */
   nav li a {
     font-size: 0.16rem;
   }
 
-  /* line 687, ../sass/index.scss */
+  /* line 693, ../sass/index.scss */
   #stage1_intro h2 {
     font-size: .4rem;
   }
-  /* line 690, ../sass/index.scss */
+  /* line 696, ../sass/index.scss */
   #stage1_intro .avatar {
     width: 1rem;
     height: 1rem;
   }
-  /* line 694, ../sass/index.scss */
+  /* line 700, ../sass/index.scss */
   #stage1_intro p {
     font-size: .18rem;
     font-family: 'American Typewriter';
   }
 
-  /* line 700, ../sass/index.scss */
+  /* line 706, ../sass/index.scss */
   #about_me {
     padding: .2rem 0 .6rem 0;
   }
-  /* line 703, ../sass/index.scss */
+  /* line 709, ../sass/index.scss */
   #about_me h2 {
     margin: 0 0 .1rem 0;
     font-size: .4rem;
   }
-  /* line 707, ../sass/index.scss */
+  /* line 713, ../sass/index.scss */
   #about_me p {
     font-size: .16rem;
   }
-  /* line 711, ../sass/index.scss */
+  /* line 717, ../sass/index.scss */
   #about_me dl dt {
     margin: .18rem 0 .05rem 0;
     font-size: .16rem;
   }
-  /* line 716, ../sass/index.scss */
+  /* line 722, ../sass/index.scss */
   #about_me dl dd strong {
     font-size: .18rem;
     margin: 0 0 .06rem 0;
   }
-  /* line 722, ../sass/index.scss */
+  /* line 728, ../sass/index.scss */
   #about_me .company {
     justify-content: space-between;
     padding: 0 .2rem;
   }
-  /* line 726, ../sass/index.scss */
+  /* line 732, ../sass/index.scss */
   #about_me .company li {
     margin: 0;
   }
-  /* line 729, ../sass/index.scss */
+  /* line 735, ../sass/index.scss */
   #about_me .company li:nth-child(1) {
     width: .7rem;
     position: relative;
     top: 4px;
   }
-  /* line 735, ../sass/index.scss */
+  /* line 741, ../sass/index.scss */
   #about_me .company li:nth-child(2) {
     position: relative;
     top: 4px;
     width: 1rem;
   }
-  /* line 741, ../sass/index.scss */
+  /* line 747, ../sass/index.scss */
   #about_me .company li:nth-child(3) {
     position: relative;
     top: .04rem;
     width: .6rem;
   }
-  /* line 748, ../sass/index.scss */
+  /* line 754, ../sass/index.scss */
   #about_me #file,
   #about_me #mac,
   #about_me #earphone {
     visibility: hidden;
   }
 
-  /* line 755, ../sass/index.scss */
+  /* line 761, ../sass/index.scss */
   #my_works {
     padding: .2rem 0 .6rem 0;
   }
-  /* line 758, ../sass/index.scss */
+  /* line 764, ../sass/index.scss */
   #my_works h2 {
     margin: 0 0 .4rem 0;
     font-size: .4rem;
   }
-  /* line 762, ../sass/index.scss */
+  /* line 768, ../sass/index.scss */
   #my_works #works_box {
     width: 100%;
   }
-  /* line 765, ../sass/index.scss */
+  /* line 771, ../sass/index.scss */
   #my_works #works_box .single_work {
     position: relative;
     width: 100%;
     margin: 0 0 .1rem 0;
   }
-  /* line 770, ../sass/index.scss */
+  /* line 776, ../sass/index.scss */
   #my_works #works_box .single_work .pic_link {
     width: 100%;
     height: 1.85rem;
     overflow: hidden;
     pointer-events: none;
   }
-  /* line 777, ../sass/index.scss */
+  /* line 783, ../sass/index.scss */
   #my_works #works_box .single_work .pic_link:hover img {
     opacity: 1;
   }
-  /* line 780, ../sass/index.scss */
+  /* line 786, ../sass/index.scss */
   #my_works #works_box .single_work .pic_link:hover i {
     visibility: hidden;
   }
-  /* line 787, ../sass/index.scss */
+  /* line 793, ../sass/index.scss */
   #my_works #works_box .single_work figcaption {
     padding: 0 0 0 .1rem;
   }
-  /* line 789, ../sass/index.scss */
+  /* line 795, ../sass/index.scss */
   #my_works #works_box .single_work figcaption a:active {
     color: #46a3de;
   }
 
-  /* line 798, ../sass/index.scss */
+  /* line 804, ../sass/index.scss */
   footer .inner {
     width: 100%;
     height: auto;
   }
-  /* line 802, ../sass/index.scss */
+  /* line 808, ../sass/index.scss */
   footer .inner .left {
     float: none;
     width: 100%;
     height: 1.2rem;
   }
-  /* line 807, ../sass/index.scss */
+  /* line 813, ../sass/index.scss */
   footer .inner .left h2 {
     font-size: .4rem;
     padding: 0 .1rem;
     margin: 0 0 .06rem 0;
   }
-  /* line 813, ../sass/index.scss */
+  /* line 819, ../sass/index.scss */
   footer .inner .left p {
     box-sizing: border-box;
     width: 100%;
     font-size: .14rem;
     padding: 0 .1rem;
   }
-  /* line 821, ../sass/index.scss */
+  /* line 827, ../sass/index.scss */
   footer .inner .right {
     float: none;
     width: 100%;
     height: .6rem;
     padding: 0;
   }
-  /* line 828, ../sass/index.scss */
+  /* line 834, ../sass/index.scss */
   footer .inner .right .social_platform li {
     width: 20%;
     height: .6rem;
   }
-  /* line 831, ../sass/index.scss */
+  /* line 837, ../sass/index.scss */
   footer .inner .right .social_platform li a {
     width: 100%;
     height: .6rem;
@@ -981,31 +986,31 @@ footer .inner .social_platform li .lk:hover {
     -webkit-border-radius: 0.04rem;
     border-radius: 0.04rem;
   }
-  /* line 837, ../sass/index.scss */
+  /* line 843, ../sass/index.scss */
   footer .inner .right .social_platform li a i {
     font-size: .36rem;
   }
-  /* line 841, ../sass/index.scss */
+  /* line 847, ../sass/index.scss */
   footer .inner .right .social_platform li .fb:active {
     background: #3b5998;
   }
-  /* line 844, ../sass/index.scss */
+  /* line 850, ../sass/index.scss */
   footer .inner .right .social_platform li .ins:active {
     background: #9a6844;
   }
-  /* line 847, ../sass/index.scss */
+  /* line 853, ../sass/index.scss */
   footer .inner .right .social_platform li .git:active {
     background: #f6f5f4;
   }
-  /* line 849, ../sass/index.scss */
+  /* line 855, ../sass/index.scss */
   footer .inner .right .social_platform li .git:active i {
     color: #333;
   }
-  /* line 853, ../sass/index.scss */
+  /* line 859, ../sass/index.scss */
   footer .inner .right .social_platform li .lk:active {
     background: #197bb5;
   }
-  /* line 860, ../sass/index.scss */
+  /* line 866, ../sass/index.scss */
   footer .inner h6 {
     margin: 0;
     top: 0;
@@ -1013,41 +1018,41 @@ footer .inner .social_platform li .lk:hover {
   }
 }
 @media screen and (min-width: 34px) {
-  /* line 869, ../sass/index.scss */
+  /* line 875, ../sass/index.scss */
   html {
     font-size: 100px;
   }
 }
 @media screen and (min-width: 375px) {
-  /* line 874, ../sass/index.scss */
+  /* line 880, ../sass/index.scss */
   html {
     font-size: 117.1875px;
   }
 }
 @media screen and (min-width: 414px) {
-  /* line 879, ../sass/index.scss */
+  /* line 885, ../sass/index.scss */
   html {
     font-size: 129.375px;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 885, ../sass/index.scss */
+  /* line 891, ../sass/index.scss */
   #about_me #file {
     background: url(../images/file@2x.png) no-repeat;
     background-size: contain;
   }
-  /* line 889, ../sass/index.scss */
+  /* line 895, ../sass/index.scss */
   #about_me #mac {
     background: url(../images/mac@2x.png) no-repeat;
     background-size: contain;
   }
-  /* line 893, ../sass/index.scss */
+  /* line 899, ../sass/index.scss */
   #about_me #earphone {
     background: url(../images/earphone@2x.png) no-repeat;
     background-size: contain;
   }
 }
-/* line 901, ../sass/index.scss */
+/* line 907, ../sass/index.scss */
 #loading {
   position: fixed;
   left: 50%;
@@ -1060,7 +1065,7 @@ footer .inner .social_platform li .lk:hover {
   box-sizing: border-box;
 }
 
-/* line 912, ../sass/index.scss */
+/* line 918, ../sass/index.scss */
 #loading span {
   display: block;
   margin: 6em auto;
@@ -1075,7 +1080,7 @@ footer .inner .social_platform li .lk:hover {
   animation: load 1.1s infinite linear;
 }
 
-/* line 925, ../sass/index.scss */
+/* line 931, ../sass/index.scss */
 #loading span,
 #loading span:after {
   border-radius: 50%;

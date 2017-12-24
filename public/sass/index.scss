@@ -671,6 +671,12 @@ footer{
 @media screen and (max-width: 600px){
   nav{
     padding: 0 0 .45rem 0;
+    
+    #lang{
+      right: 25px;
+      top: 60px;
+    }
+    
     ul{
       padding: .2rem .2rem 0;
       justify-content: space-between;
