@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'ALusine';
+  src: url("ALusine.ttf.woff") format("woff"), url("ALusine.ttf.svg#ALusine") format("svg"), url("ALusine.ttf.eot"), url("ALusine.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'blogger_sans';
+  src: url("blogger_sans-webfont.woff2") format("woff2"), url("blogger_sans-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 25, ../sass/error.scss */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  list-style-type: none;
+  font-family: 'blogger_sans','Open Sans', Arial, 'Hiragino Sans GB';
+}
+
+/* line 35, ../sass/error.scss */
+.clearfix:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '';
+  overflow: hidden;
+}
+
+/* line 42, ../sass/error.scss */
+html {
+  background: #46a3de;
+}
+
+/* line 45, ../sass/error.scss */
+body {
+  text-align: center;
+}
+
+/* line 48, ../sass/error.scss */
+h1 {
+  text-align: center;
+  font-size: 54px;
+  line-height: 100px;
+}
+
+/* line 53, ../sass/error.scss */
+h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 100px 0;
+}
+
+/* line 58, ../sass/error.scss */
+#back-home {
+  text-align: center;
+  color: #bce0f7;
+  font-size: 16px;
+}
+/* line 63, ../sass/error.scss */
+#back-home:hover {
+  color: #fff;
+  border-bottom: 3px #fff solid;
+}

@@ -92,7 +92,6 @@ var pre_load_img = {
 
                     if (pp_num == img_sum) {
                         if (callback != null) {
-                            console.log("回调")
                             callback();
                         }
                     }
@@ -103,7 +102,7 @@ var pre_load_img = {
     }
 
     function add() {
-        console.log("所有图片资源加载完成");
+        // console.log("所有图片资源加载完成");
         setTimeout(function () {
             loaded();
         }, 1000)

@@ -1,0 +1,30 @@
+{
+  "config" : {
+    "lang" : "en",
+    "title" : "Welcome to my profile | Luke Lu",
+    "aboutme" : "ABOUT ME",
+    "myworks" : "MY WORKS",
+    "contactme" : "CONTACT ME",
+    "info" : {
+      "h2" : "Hi,my name is ",
+      "p1" : "I am a Front-end developer.",
+      "p2" : "I love Web Design.",
+      "p3" : "I am currently seeking new opportunities."
+    },
+    "Aboutme" : {
+      "title" : "About me",
+      "dt1" : "I am good at:",
+      "dt2" : "I’m wokring hard on:",
+      "dt3" : "I know something about:",
+      "dt4" : "I used to work at:",
+      "dt5" : "In my part time, I love:",
+      "hob1" : "playing guitar / rock-roll",
+      "hob2" : "swimming / diving"
+    },
+    "Myworks" : "My works",
+    "Contactme" : {
+      "title" : "Contact me",
+      "p1" : "Feel free to contact me anytime."
+    }
+  }
+}

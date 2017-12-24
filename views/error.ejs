@@ -1,3 +1,19 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-retina.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-ipad-retina.png" />
+  <title><%= error.status %></title>
+  <link rel="stylesheet" href="/css/error.css"/>
+</head>
+<body>
+  <h1><%= message %></h1>
+  <h2><%= error.status %></h2>
+  <a id="back-home" href="/zh">返回首页</a>
+</body>
+</html>      
+

@@ -1,0 +1,67 @@
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/box-shadow';
+
+$lightblue: #46a3de;
+
+@font-face {
+  font-family: 'ALusine';
+  src:  url('ALusine.ttf.woff') format('woff'),
+  url('ALusine.ttf.svg#ALusine') format('svg'),
+  url('ALusine.ttf.eot'),
+  url('ALusine.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'blogger_sans';
+  src: url('blogger_sans-webfont.woff2') format('woff2'),
+       url('blogger_sans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  list-style-type: none;
+  font-family: 'blogger_sans','Open Sans', Arial, 'Hiragino Sans GB';
+}
+.clearfix:after{
+  display: block;
+  height: 0;
+  clear: both;
+  content: '';
+  overflow: hidden;
+}
+html{
+  background: $lightblue;
+}
+body{
+  text-align: center;
+}
+h1{
+  text-align: center;
+  font-size: 54px;
+  line-height: 100px;
+}
+h2{
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 100px 0;
+}
+#back-home{
+  text-align: center;
+  color: #bce0f7;
+  font-size: 16px;
+
+  &:hover{
+    color: #fff;
+    border-bottom: 3px #fff solid;
+  }
+}
