@@ -11,7 +11,10 @@ if(!isSupportTouch){
       yidianer_thumb: 'yidianer-web.jpg',
       qr_thumb: 'qr-code.gif',
       patent_thumb: 'patent-web.jpg',
-      zhiyi_thumb: 'zhiyi-web.jpg'
+      zhiyi_thumb: 'zhiyi-web.jpg',
+      xiaoyu_thumb: 'xiaoyuzaijia_qr.jpg',
+      dayu_thumb: 'dayuhire_qr.jpg',
+      tubaozi_thumb: 'tubaozi_qr.jpg'
     }
 
   var toggleClass = function(e){
@@ -30,12 +33,14 @@ if(!isSupportTouch){
 
     toggleClass($('#loader'));
     curPic.onload = function(){
+      var picW = curPic.width;
       var picH = curPic.height;
+      $('#pop_box').css({'width': picW});
       if(picH >= 600){
-        $('#pop_box').css({'height':'600px','margin':'-300px 0 0 -400px'});
+        $('#pop_box').css({'height':'600px','margin':'-300px 0 0 -'+ picW/2 +'px'});
       }
       else if(picH < 600){
-        $('#pop_box').css({'height': picH +'px','margin': '-'+ picH/2 +'px 0 0 -400px'});        
+        $('#pop_box').css({'height': picH +'px','margin': '-'+ picH/2 +'px 0 0 -'+ picW/2 +'px'});        
       }
       
       $('#loader').removeClass('active');
@@ -51,6 +56,7 @@ if(!isSupportTouch){
   $('#overlay').on('click',function(){
     toggleClass($('#pop_box'));
     toggleClass($('#overlay'));
+    $('#pop_box').css({'width': 0, 'height': 0});
   });
 
   $(window).on('scroll', function() {
